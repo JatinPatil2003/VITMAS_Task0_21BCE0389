@@ -1,58 +1,178 @@
 # VITMAS_Task0_21BCE0389
 First task given by VITMAS.
-Getting Started
-git init
+## Demo Video link:
 
-This creates a local repository in your current folder. Hidden by default.
+https://youtu.be/nXhuLwMaupM 
+ ##  **GIT Commands**
+ 
+The git commands are:
 
-Adding files
-git add <filename>
+* ##  `git config`:
 
-Adds the specified file to the staging area so that it can be commited later. Alternatively,
+    >This command sets the author name and email address respectively to be used with your commits.
+    
+    **Used as**;
+    ```
+    git config -–global user.name “[name]”
 
-git add .
+    git config -–global user.email “[email address]”  
+    ```
+    
+* ## `git init`:
 
-Adds all files present in current folder to the staging area.
+     >This command is used to start a new repository.
 
-Removing a file from the staging area:
-git rm --cached <filename>
+     **Used as**;
+     ```
+     git init [repository name]
+     ```
 
-Commiting files and other related tasks
-git commit -m "comment"
+* ##  `git clone`:<br>
+    >This command is used to obtain a repository from an existing URL.
 
-Commits all the files present in the staging area to the local repository with a comment specified by the user.
+    **Used as**;
+    ```
+    git clone [url of repository]
+    ```
+* ##  `git add`:<br>
+     >This command adds a file to the staging area.<br>
+     The `git add *` command is used to add one or more to the staging area.
 
-git status
+     **Used as**;
+     ```
+     git add [file] 
+     git add * 
+     ```
+* ##  `git commit`:<br>
+     >This command records or snapshots the file permanently in the version history.<br>
+     The `git commit -a` command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
 
-Shows the status of all files in working directory.
+     **Used as**;
+     ```
+     git commit -m “[ Type in the commit message]”  
+     git commit -a
+     ```
+* ## `git diff`:<br>
+     >This command shows the file differences which are not yet staged.<br>
+     The `git diff --staged`command shows the differences between the files in the staging area and the latest version present.<br>
+     The `git diff [first branch] [second branch]` command shows the differences between the two branches mentioned.
 
-git log
+     **Used as**;
+     ```
+     git diff
+     git diff -–staged 
+     ```
+* ##  `git reset`:<br>
+     >This command unstages the file, but it preserves the file contents.<br>
+     The `git reset [commit]` command undoes all the commits after the specified commit and preserves the changes locally.<br>
+     The `git reset –hard [commit]` command discards all history and goes back to the specified commit.
 
-Shows a log of all actions done by the user.
+     **Used as**;
+     ```
+     git reset [file]
+     git reset [commit]  
+     git reset –hard [commit]
+     ```
+* ##  `git status`:<br>
+     >This command lists all the files that have to be committed.
+     
+     **Used as**;
+     ```
+     git status
+     ```
+* ##  `git rm`:<br>
+     >This command deletes the file from your working directory and stages the deletion.
 
-Branches
-Branches help the developer to give a step-by-step view of their development process. This can be done by creating different branches at different stages of development, so that the developer can easily revert back to an older version in case of any errors.
+     **Used as**;
+     ```
+     git rm [file]
+     ```
+* ##  `git log`:<br>
+     >This command is used to list the version history for the current branch.
 
-git branch <name>
+     **Used as**;
+     ```
+     git log –follow[file] 
+     ```
+* ##  `git show`:<br>
+     >This command showss he metadata and content changes of specified commit.
 
-Creates a new branch with the specified name.
+     **Used as**;
+     ```
+     git show [commit]
+     ```
+* ##  `git tag`:<br>
+     >This command is used to give tags to the specified commit.
 
-git checkout <name>
+     **Used as**;
+     ```
+     git tag [commitID]
+     ```
+* ##  `git branch`:<br>
+     >This command lists all the local branches in the current repository.<br>
+     The `git branch [branch name]` command creates a new branch.<br>
+     The `git branch -d [branch name]` command deletes the feature branch.
 
-Switches to the branch with specified name.
+     **Used as**;
+     ```
+     git branch
+     git branch [branch name]
+     git branch -d [branch name]
+     ```
+* ##  `git checkout`:<br>
+     >This command is used to switch from one branch to another.<br>
+     The `git checkout -b [branch name]` command creates a new branch and also switches to it.
 
-Remote repositories
-git remote add origin <link>
+     **Used as**;
+     ```
+     git checkout [branch name]
+     git checkout -b [branch name]
+     ```
+* ##  `git merge`:<br>
+     >This commands merges the specified branch's history into the current branch.
 
-Adds a remote repository with the specified link.
+     **Used as**;
+     ```
+     git merge [branch name]
+     ```
+* ##  `git remote`:<br>
+     >This command is used to connect your local repository to the remote server.
 
-git push -u origin master
+     **Used as**;
+     ```
+     git remote add [variable name] [Remote Server Link]
+     ```
+* ##  `git push`:<br>
+     >This command sends the committed changes of master branch to your remote repository.<br>
+     The `git push [variable name] [branch]` command sends the branch commits to your remote repository.<br>
+     The `git push –all [variable name]` command pushes all branches to your remote repository.<br>
+     The `git push [variable name] : [branch name]` command deletes a branch on your remote repository.
 
-Pushes or uploads all files from user's local repository to the remote repository specified earlier.
+     **Used as**;
+     ```
+     git push [variable name] master
+     git push [variable name] [branch]
+     git push –all [variable name]
+     git push [variable name] :[branch name]
+     ```
+* ##  `git pull`:
+     >This command fetches and merges changes on the remote server to your working directory.
 
-git pull
+     **Used as**;
+     ```
+     git pull [Repository Link]
+     ```
+* ##  `git stash`:<br>
+     >This command temporarily stores all the modified tracked files.<br>
+     The `git stash pop` command restores the most recently stashed files.<br>
+     The `git stash list` command lists all stashed changesets.<br>
+     The `git stash drop` command discards the most recently stashed changeset. 
 
-This will "pull" i.e. download all the content from a remote repository to your local repostiory.
+     **Used as**;
+     ```
+     git stash save
+     git stash pop
+     git stash list
+     git stash drop
+     ```
 
-Demo Video link:
-https://youtu.be/nXhuLwMaupM
